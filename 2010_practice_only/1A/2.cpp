@@ -1,7 +1,7 @@
 #include<iostream>
 #include<fstream>
 #include<string>
-#include<cmath>
+#include<stdlib.h>
 
 using namespace std;
 
@@ -22,11 +22,11 @@ int main(){
     for(i=0;i<T;i++){
                      fin>>D>>I>>M>>N;
                      for(j=0;j<N;j++) fin>>a[j];
-                     
+
                      for(k=0;k<256;k++){
                                         cost[0][k]=min(D,abs(k-a[0]));
                      }
-                     
+
                      for(j=1;j<N;j++) for(k=0;k<256;k++){
                                       best=INF;
                                       mod=abs(k-a[j]);
@@ -37,10 +37,10 @@ int main(){
                                                          if(best>cost[j-1][l]+ins+mod) best=cost[j-1][l]+ins+mod;
                                       }
                                       if(best>cost[j-1][k]+D) best=cost[j-1][k]+D;
-                                      
+
                                       cost[j][k]=best;
                      }
-                     
+
                      fout<<"Case #"<<i+1<<": ";
                      best=INF;
                      for(k=0;k<256;k++){

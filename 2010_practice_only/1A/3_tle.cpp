@@ -1,3 +1,4 @@
+// TLE error
 #include<iostream>
 #include<fstream>
 #include<string>
@@ -21,7 +22,7 @@ bool win(int i,int j){
 
 int main(){
     //prepare();
-    
+
     ifstream fin;
     ofstream fout;
     fin.open("C-small-practice.in");
@@ -37,7 +38,7 @@ int main(){
                      for(j=A1;j<=A2;j++) for(k=B1;k<=B2;k++){
                                          if(win(j,k)) count++;
                      }
-                     
+
                      fout<<"Case #"<<i+1<<": ";
                      fout<<count;
                      fout<<endl;

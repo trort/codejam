@@ -1,3 +1,4 @@
+// OOM error
 #include<iostream>
 #include<fstream>
 #include<string>
@@ -24,7 +25,7 @@ void prepare(){
 
 int main(){
     prepare();
-    
+
     ifstream fin;
     ofstream fout;
     fin.open("sample.in");
@@ -40,7 +41,7 @@ int main(){
                      for(j=A1;j<=A2;j++) for(k=B1;k<=B2;k++){
                                          if(win[j][k]) count++;
                      }
-                     
+
                      fout<<"Case #"<<i+1<<": ";
                      fout<<count;
                      fout<<endl;
